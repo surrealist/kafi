@@ -1,0 +1,14 @@
+footer {
+    background-color:  floralwhite;
+    margin-top: 50px;
+    font-size: 90%;
+    padding: 20px 0px 60px 0px;
+}
+
+footer a {
+    color: dimgray;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
