@@ -6,16 +6,13 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "chance/chance.d.ts": {
-      "commit": "fd4e99d06333cbc5921d34178fa130e5193f3df3"
-    },
-    "underscore/underscore.d.ts": {
-      "commit": "fd4e99d06333cbc5921d34178fa130e5193f3df3"
+      "commit": "2c96e9e77765b72ce43ab8163f42e504f3e2facb"
     },
     "angularjs/angular.d.ts": {
-      "commit": "fd4e99d06333cbc5921d34178fa130e5193f3df3"
+      "commit": "2c96e9e77765b72ce43ab8163f42e504f3e2facb"
     },
     "jquery/jquery.d.ts": {
-      "commit": "fd4e99d06333cbc5921d34178fa130e5193f3df3"
+      "commit": "2c96e9e77765b72ce43ab8163f42e504f3e2facb"
     }
   }
 }

@@ -1,0 +1,19 @@
+{
+  "name": "Kafi",
+  "version": "0.1",
+  "homepage": "https://github.com/surrealist/kafi",
+  "authors": [
+    "Suthep <suthep@gfbd.co.th>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chance": "~0.7.6"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Kafi",
+  "version": "0.1.0",
+  "description": "Household electricity monthly charge calculator",
+  "main": "app/index.html",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "angular": "^1.4.1",
+    "jquery": "^2.1.4",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/surrealist/kafi.git"
+  },
+  "author": "Suthep <suthep@gfbd.co.th>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/surrealist/kafi/issues"
+  },
+  "homepage": "https://github.com/surrealist/kafi"
+}
