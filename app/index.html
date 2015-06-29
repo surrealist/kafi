@@ -1,117 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Code Mania 10: TypeScript, Now.</title>
-
-  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="app.css"/>
-  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="../node_modules/angular/angular.js"></script>
-  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../bower_components/chance/chance.js"></script>
-</head>
-<body ng-app="myApp"
-      ng-controller="MainController as c">
-
-  <div class="container">
-    <h2>
-      TypeScript Demonstration
-    </h2>
-    <strong>Code Mania 10</strong>
-    <time datetime="2015-06-27" pubdate>June 27, 2015</time>
-    <br>
-    <a href="https://facebook.com/suthep" target="_blank">
-      https://facebook.com/suthep
+  
+  <head>
+    <meta charset="UTF-8">
+    <title>Code Mania 10: TypeScript, Now.</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/chance/chance.js"></script>
+  </head>
+  
+  <body ng-app="myApp" ng-controller="MainController as c">
+    <div class="container">
+      <h2>Kafi</h2>
     </a>
-    <hr/>
-
-    <div class="row">
-      <div class="col-md-8">
-        <button class="btn btn-info btn-sm pull-right"
-                ng-click="c.addDevice()">
-          <span class="glyphicon glyphicon-plus"></span>
-          Add device
-        </button>
-        <h3 ng-cloak>
-          <span class="glyphicon glyphicon-home"></span>
-          {{ c.myHouse.name }}
-        </h3>
-
-        <table class="table table-striped table-hover" ng-cloak>
-          <thead>
-            <tr>
-              <th style="width: 30px;">No{{ d.watts }}.</th>
-              <th>Name</th>
-              <th style="width: 80px;" class="text-right">Pcs</th>
-              <th style="width: 80px;" class="text-right">Watts</th>
-              <th style="width: 100px;" class="text-right">Hours/Day</th>
-              <th style="width: 100px;" class="text-right">Days/Month</th>
-              <th style="width: 100px;" class="text-right">Units/Month</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr ng-repeat="d in c.myHouse.devices">
-              <td>{{ $index+1 }}.</td>
-              <td>{{ d.name }}</td>
-              <td class="text-right">
-                <input type="number" ng-model="d.quantity" min="0" max="99"
-                       style="text-align: right;"/>
-              </td>
-              <td class="text-right">{{ d.watts | number:2 }}</td>
-              <td class="text-right">{{ d.hoursPerDay | number:2}}</td>
-              <td class="text-right">{{ d.daysPerMonth | number:2}}</td>
-              <td class="text-right text-info">{{ d.unitsPerMonth | number:2}}</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="4">
-                <b>Total:</b> {{ c.myHouse.devices.length }} devices
-              </td>
-              <td colspan="2" class="text-right">
-                <b>Total Units/Month:</b>
-              </td>
-              <td class="info text-right text-info">
-                <strong>
-                  {{ c.myHouse.totalUnitsPerMonth | number:2 }}
-                </strong>
-              </td>
-            </tr>
-            <tr>
-
-              <td colspan="6" class="text-right">
-                <b>Monthly Fee:</b>
-              </td>
-              <td class="info text-right text-info">
-                <strong style="font-size: 120%;">
-                  {{ c.myHouse.monthlyFee | number:2 }}
-                </strong>
-              </td>
-            </tr>
-          </tfoot>
-        </table>
+      <hr/>
+      <div class="row">
+        <div class="col-md-8">
+          <button class="btn btn-info btn-sm pull-right" ng-click="c.addDevice()">
+            <span class="glyphicon glyphicon-plus"></span>Add device</button>
+          <h3 ng-cloak>
+            <span class="glyphicon glyphicon-home"></span>
+            {{ c.myHouse.name }}
+          </h3>
+          <table class="table table-striped table-hover" ng-cloak>
+            <thead>
+              <tr>
+                <th style="width: 30px;">No{{ d.watts }}.</th>
+                <th>Name</th>
+                <th style="width: 80px;" class="text-right">Pcs</th>
+                <th style="width: 80px;" class="text-right">Watts</th>
+                <th style="width: 100px;" class="text-right">Hours/Day</th>
+                <th style="width: 100px;" class="text-right">Days/Month</th>
+                <th style="width: 100px;" class="text-right">Units/Month</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="d in c.myHouse.devices">
+                <td>{{ $index+1 }}.</td>
+                <td>{{ d.name }}</td>
+                <td class="text-right">
+                  <input type="number" ng-model="d.quantity" min="0" max="99" style="text-align: right;" />
+                </td>
+                <td class="text-right">{{ d.watts | number:2 }}</td>
+                <td class="text-right">{{ d.hoursPerDay | number:2}}</td>
+                <td class="text-right">{{ d.daysPerMonth | number:2}}</td>
+                <td class="text-right text-info">{{ d.unitsPerMonth | number:2}}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4">
+                  <b>Total:</b> 
+                  {{ c.myHouse.devices.length }} devices
+                </td>
+                <td colspan="2" class="text-right">
+                  <b>Total Units/Month:</b>
+                </td>
+                <td class="info text-right text-info">
+                  <strong>{{ c.myHouse.totalUnitsPerMonth | number:2 }}</strong>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="6" class="text-right">
+                  <b>Monthly Fee:</b>
+                </td>
+                <td class="info text-right text-info">
+                  <strong style="font-size: 120%;">{{ c.myHouse.monthlyFee | number:2 }}</strong>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
       </div>
     </div>
-  </div>
+    <footer>
+      <div class="container">
+        <br />
+        <p style="font-size: 85%;">
+          <i class="fa fa-copyright fa-flip-horizontal"></i> 
+          พุทธศักราช ๒๕๕๘ &ndash;
+          <span>ค่าไฟ</span>
+        </p>
+      </div>
+    </footer>
+    <script src="all.js"></script>
+  </body>
 
-  <footer>
-    <div class="container">
-      <a href="http://next.greatfriends.biz" target="_blank">
-        <span class="label label-default">SPONSOR ADS</span>
-        12<sup>th</sup> Anniversary <strong>GreatFriends.Biz</strong>
-        <br/>
-
-        <div>.NET/OOAD/OOP Training and Community since 2003<br/>
-             Take 3 courses, Get 1 free course! only through this
-          <time datetime="2015-07-31">July 31</time>
-          <br/>
-             http://Next.GreatFriends.Biz
-        </div>
-      </a>
-    </div>
-  </footer>
-
-  <script src="all.js"></script> 
-</body>
 </html>
