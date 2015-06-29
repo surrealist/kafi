@@ -4,8 +4,22 @@ var concat = require("gulp-concat");
 var ugly = require("gulp-uglify");
 var htmlmin = require("gulp-minify-html");
 
-gulp.task('default', ['ts', 'html', 'css'], function () {
+gulp.task('default', ['jslib', 'ts', 'html', 'css'], function () {
   //
+});
+
+gulp.task('jslib', function () {
+  var src = [
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/angular/angular.js',
+    'node_modules/jquery/dist/jquery.min.js',
+    'bower_components/chance/chance.js'
+  ];
+
+  return gulp.src(src)
+    .pipe(concat('lib.js'))
+    .pipe(ugly())
+    .pipe(gulp.dest('dest'));
 });
 
 gulp.task('ts', function () {
@@ -14,16 +28,20 @@ gulp.task('ts', function () {
     .pipe(ts(tsProject));
 
   return tsResult.js
-    .pipe(concat('all.js')) 
+    .pipe(concat('all.js'))
     .pipe(gulp.dest('dest'));
 });
 
-gulp.task('html', function(){
-  return gulp.src(['app/index.html']) 
-      .pipe(gulp.dest('dest'));
+gulp.task('html', function () {
+  return gulp.src(['app/index.html'])
+    .pipe(gulp.dest('dest'));
 });
 
-gulp.task('css', function(){
-  return gulp.src(['app/app.css'])
-      .pipe(gulp.dest('dest'));
+gulp.task('css', function () {
+  return gulp.src([
+    'bower_components/fontawesome/css/font-awesome.min.css',
+    'node_modules/bootstrap/dist/css/bootstrap.min.css',
+    'app/app.css'])
+    .pipe(concat('all.css'))
+    .pipe(gulp.dest('dest'));
 });
