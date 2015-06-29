@@ -1,5 +1,5 @@
 ///<reference path="../typings/tsd.d.ts"/>
-///<reference path="models.d.ts"/>
+///<reference path="models.ts"/>
 
 // controller.ts
 

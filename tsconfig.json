@@ -1,0 +1,14 @@
+{
+    "compilerOptions": { 
+        "target": "ES5",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true, 
+        "sourceMap": true
+    },
+    "files": [
+        "app/app.ts",
+        "app/models.ts",
+        "app/controller.ts"
+    ]
+}

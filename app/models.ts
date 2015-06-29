@@ -30,7 +30,7 @@ module Demo {
       this.devices = [];
     }
 
-    protected get calculator() {
+    protected get calculator() : Calculator {
       return null;
     }
 
