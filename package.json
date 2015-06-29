@@ -22,8 +22,8 @@
     "type": "git",
     "url": "https://github.com/surrealist/kafi.git"
   },
-  "author": "Suthep <suthep@gfbd.co.th>",
-  "license": "ISC",
+  "author": "Suthep Sangvirotjanaphat <suthep@gfbd.co.th>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/surrealist/kafi/issues"
   },
