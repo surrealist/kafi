@@ -6,6 +6,9 @@
 app/*.js
 app/*.js.map
 
+# output folder
+dest/
+
 # WebStorm folder
 .idea/
 
