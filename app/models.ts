@@ -34,6 +34,12 @@ module Demo {
       return null;
     }
 
+    public get totalDevices() {
+      var sum = 0;
+      this.devices.forEach(d => sum += (d.quantity));
+      return sum;
+    }
+    
     public get totalUnitsPerMonth() {
       var sum = 0.0;
       this.devices.forEach(d => sum += d.unitsPerMonth);
