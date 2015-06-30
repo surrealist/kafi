@@ -7,7 +7,7 @@ app/*.js
 app/*.js.map
 
 # output folder
-dest/
+calculator/
 
 # WebStorm folder
 .idea/
