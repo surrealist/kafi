@@ -1,5 +1,9 @@
+div.navbar a {
+    color: #EBC00C !important;
+}
+
 footer {
-    background-color:  floralwhite;
+    background-color:  #EBC00C;
     margin-top: 50px;
     font-size: 90%;
     padding: 20px 0px 60px 0px;
@@ -11,4 +15,8 @@ footer a {
 
 footer a:hover {
     text-decoration: none;
+}
+
+thead th { 
+    font-weight: normal !important;
 }
