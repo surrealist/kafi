@@ -6,7 +6,7 @@
 module Demo {
   export class MainController {
 
-    public static $injector = [ "$log" ];
+    public static $inject = [ "$log" ];
     public myHouse:House = new House();
 
     constructor(public $log:angular.ILogService) {
