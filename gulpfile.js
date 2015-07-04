@@ -31,6 +31,7 @@ gulp.task('ts', function () {
 
   return tsResult.js
     .pipe(concat('all.js'))
+    .pipe(ugly())
     .pipe(gulp.dest(destinationFolder));
 });
 
@@ -40,6 +41,7 @@ gulp.task('html', function () {
   ];
 
   return gulp.src(src)
+    .pipe(htmlmin())
     .pipe(gulp.dest(destinationFolder));
 });
 
