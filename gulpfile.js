@@ -20,7 +20,7 @@ gulp.task('jslib', function () {
 
   return gulp.src(src)
     .pipe(concat('lib.js'))
-    .pipe(ugly())
+  //  .pipe(ugly())
     .pipe(gulp.dest(destinationFolder));
 });
 
@@ -30,8 +30,8 @@ gulp.task('ts', function () {
     .pipe(ts(tsProject));
 
   return tsResult.js
-    .pipe(concat('all.js'))
-    .pipe(ugly())
+  // .pipe(concat('all.js'))
+  // .pipe(ugly())
     .pipe(gulp.dest(destinationFolder));
 });
 
@@ -41,7 +41,7 @@ gulp.task('html', function () {
   ];
 
   return gulp.src(src)
-    .pipe(htmlmin())
+  //    .pipe(htmlmin())
     .pipe(gulp.dest(destinationFolder));
 });
 

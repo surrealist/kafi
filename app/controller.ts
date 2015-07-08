@@ -1,7 +1,7 @@
-///<reference path="../typings/tsd.d.ts"/>
-///<reference path="models.ts"/>
+///<reference path="../typings/tsd.d.ts"/> 
 
-// controller.ts
+import House = require("models/House");
+import Device = require("models/Device");
 
 module Demo {
   export class MainController {
