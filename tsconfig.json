@@ -1,19 +1,15 @@
 {
-    "compilerOptions": { 
+    "compilerOptions": {
         "target": "ES5",
         "module": "commonjs",
         "noImplicitAny": true,
         "removeComments": true,
-        "preserveConstEnums": true, 
+        "preserveConstEnums": true,
         "sourceMap": true
     },
     "files": [
-        "app/app.ts", 
-        "app/controller.ts",
-        "app/models/Device.ts",
-        "app/models/Building.ts",
-        "app/models/House.ts",
-        "app/models/Calculator.ts",
-        "app/models/HouseCalculator.ts"
+        "app/app.ts",
+        "app/models.ts",
+        "app/controller.ts"
     ]
 }

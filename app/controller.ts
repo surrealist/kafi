@@ -1,7 +1,5 @@
 ///<reference path="../typings/tsd.d.ts"/> 
-
-import House = require("models/House");
-import Device = require("models/Device");
+/// <reference path="models.ts" />
 
 module Demo {
   export class MainController {
