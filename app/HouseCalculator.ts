@@ -1,5 +1,5 @@
-import Calculator from 'Calculator';
-import Building from 'Building';
+import Calculator from './Calculator';
+import Building from './Building';
 
 export default class HouseCalculator implements Calculator {
 

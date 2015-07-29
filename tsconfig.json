@@ -17,6 +17,8 @@
         "app/House.ts", 
         "app/HouseCalculator.ts",
         
-        "test/HouseCalculatorTest.ts" 
+        "test/DeviceTest.ts",
+        "test/HouseTest.ts",
+        "test/HouseCalculatorTest.ts"
     ]
 }

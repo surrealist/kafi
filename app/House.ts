@@ -1,5 +1,5 @@
-import Building from 'Building';
-import HouseCalculator from 'HouseCalculator';
+import Building from './Building';
+import HouseCalculator from './HouseCalculator';
 
 export default class House extends Building {
 
@@ -12,3 +12,5 @@ export default class House extends Building {
   }
 
 }
+
+

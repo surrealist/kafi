@@ -1,4 +1,4 @@
-import Building from 'Building';
+import Building from './Building';
 
 interface Calculator {
     calculate(building: Building): number;
