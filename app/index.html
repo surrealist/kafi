@@ -10,7 +10,7 @@
   </head>
   
   <body ng-app="myApp" ng-controller="MainController as c">
-    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #993308 !important; color: #EBC00C;">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #993308 !important; border-color: #993308 !important; color: #EBC00C;">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -33,9 +33,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12" style="background-color: steelblue; color: white; margin-bottom: 15px;">
+      <div class="col-xs-12" style="background-color: dimgray; color: white; margin-bottom: 15px;">
         <div class="container">
-          <div style="padding: 10px 0px;">โปรแกรมคำนวณค่าไฟฟ้า</div>
+          <div style="padding: 10px 0px;">โปรแกรมคำนวณค่าไฟฟ้า
+            <br/>Electricity monthly charge calculator</div>
         </div>
       </div>
     </div>
@@ -45,7 +46,7 @@
           <br/>
           <button class="btn btn-info btn-sm pull-right" style="margin-top: 10px;" ng-click="c.addDevice()">
             <span class="glyphicon glyphicon-plus"></span>
-            <span>เพิ่มอุปกรณ์</span>
+            <span>เพิ่มอุปกรณ์ (Add new item)</span>
           </button>
           <h3 ng-cloak>
             <span class="glyphicon glyphicon-home"></span>
@@ -55,13 +56,22 @@
             <table class="table table-hover" ng-cloak>
               <thead>
                 <tr>
-                  <th class="text-left" style="width: 30px;">ลำดับ</th>
-                  <th>ชื่ออุปกรณ์ไฟฟ้า</th>
-                  <th style="width: 80px;" class="text-right">จำนวน</th>
-                  <th style="width: 110px;" class="text-right">กำลังไฟ (วัตต์)</th>
-                  <th style="width: 100px;" class="text-right">ชั่วโมง/วัน</th>
-                  <th style="width: 100px;" class="text-right">วัน/เดือน</th>
-                  <th style="width: 100px;" class="text-right">หน่วย/เดือน</th>
+                  <th class="text-left" style="width: 30px;">ลำดับ
+                    <br/>No.</th>
+                  <th>ชื่ออุปกรณ์ไฟฟ้า
+                    <br/>
+                    Electricity appliance
+                  </th>
+                  <th style="width: 80px;" class="text-right">จำนวน
+                    <br/>Qty</th>
+                  <th style="width: 110px;" class="text-right">กำลังไฟ (วัตต์)
+                    <br/>Power (watt)</th>
+                  <th style="width: 100px;" class="text-right">ชั่วโมง/วัน
+                    <br/>Hrs/Day</th>
+                  <th style="width: 100px;" class="text-right">วัน/เดือน
+                    <br/>Days/Mo</th>
+                  <th style="width: 100px;" class="text-right">หน่วย/เดือน
+                    <br/>Units/Mo</th>
                 </tr>
               </thead>
               <tbody>
@@ -80,12 +90,16 @@
               <tfoot>
                 <tr>
                   <td colspan="4">
-                    <span>รวม</span>
+                    <span>รวม Total</span>
                     <b class="text-info">{{ c.myHouse.totalDevices }}</b>
-                    <span>ชิ้น</span>
+                    <span>ชิ้น units</span>
                   </td>
                   <td colspan="2" class="text-right">
-                    <b>รวมจำนวนหน่วย/เดือน:</b>
+                    <b>
+                      รวมจำนวนหน่วย/เดือน:
+                      <br/>
+                      Total Units/Month:
+                    </b>
                   </td>
                   <td class="info text-right text-info">
                     <strong>{{ c.myHouse.totalUnitsPerMonth | number:2 }}</strong>
@@ -93,7 +107,11 @@
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>ค่าไฟรายเดือน:</b>
+                    <b>
+                      ค่าไฟรายเดือน (บาท):
+                      <br/>
+                      Monthly Fee (Baht):
+                    </b>
                   </td>
                   <td class="info text-right text-info">
                     <strong style="font-size: 120%;">{{ c.myHouse.monthlyFee | number:2 }}</strong>

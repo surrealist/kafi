@@ -1,3 +1,7 @@
+body {
+    padding-top: 50px;
+}
+
 div.navbar a {
     color: #EBC00C !important;
 }
@@ -6,7 +10,7 @@ footer {
     background-color:  #EBC00C;
     margin-top: 50px;
     font-size: 90%;
-    padding: 20px 0px 60px 0px;
+    padding: 20px 0px 200px 0px;
 }
 
 footer a {

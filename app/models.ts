@@ -57,7 +57,7 @@ module Demo {
 
   export class House extends Building {
 
-    constructor(public name:string = 'บ้านของฉัน') {
+    constructor(public name:string = 'My space') {
       super(name);
     }
 
