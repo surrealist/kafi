@@ -5,11 +5,16 @@
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "sourceMap": true
+        "sourceMap": true,
+        "outDir": "Calculator"
     },
     "files": [
         "app/app.ts",
-        "app/models.ts",
-        "app/controller.ts"
+        "app/controller.ts",
+        "app/models/Device.ts", 
+        "app/models/Calculator.ts", 
+        "app/models/Building.ts", 
+        "app/models/House.ts", 
+        "app/models/HouseCalculator.ts" 
     ]
 }
