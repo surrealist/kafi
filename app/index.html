@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="all.css" />
   </head>
   
-  <body ng-app="myApp" ng-controller="MainController as c">
+  <body ng-controller="MainController as c">
     <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #993308 !important; border-color: #993308 !important; color: #EBC00C;">
       <div class="container">
         <div class="navbar-header">
@@ -59,9 +59,7 @@
                   <th class="text-left" style="width: 30px;">ลำดับ
                     <br/>No.</th>
                   <th>ชื่ออุปกรณ์ไฟฟ้า
-                    <br/>
-                    Electricity appliance
-                  </th>
+                    <br/>Electricity appliance</th>
                   <th style="width: 80px;" class="text-right">จำนวน
                     <br/>Qty</th>
                   <th style="width: 110px;" class="text-right">กำลังไฟ (วัตต์)
@@ -95,11 +93,8 @@
                     <span>ชิ้น units</span>
                   </td>
                   <td colspan="2" class="text-right">
-                    <b>
-                      รวมจำนวนหน่วย/เดือน:
-                      <br/>
-                      Total Units/Month:
-                    </b>
+                    <b>รวมจำนวนหน่วย/เดือน:
+                      <br/>Total Units/Month:</b>
                   </td>
                   <td class="info text-right text-info">
                     <strong>{{ c.myHouse.totalUnitsPerMonth | number:2 }}</strong>
@@ -107,11 +102,8 @@
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>
-                      ค่าไฟรายเดือน (บาท):
-                      <br/>
-                      Monthly Fee (Baht):
-                    </b>
+                    <b>ค่าไฟรายเดือน (บาท):
+                      <br/>Monthly Fee (Baht):</b>
                   </td>
                   <td class="info text-right text-info">
                     <strong style="font-size: 120%;">{{ c.myHouse.monthlyFee | number:2 }}</strong>
@@ -134,9 +126,19 @@
       </div>
     </footer>
     <script src="lib.js"></script>
-    <script src="app/app.js"></script>
+    <!--<script src="app/app.js"></script>
     <script src="app/models.js"></script>
-    <script src="app/controller.js"></script>
+    <script src="app/controller.js"></script>-->
+    <script src="jspm_packages/system.js"></script>
+    <script>
+      System.config({
+        baseURL: '/app',
+        "defaultJSExtensions": true
+      });
+      System.import('app').then(function(){  
+            angular.bootstrap(document.getElementsByTagName("body"), ['myApp']); 
+      });
+    </script>
   </body>
 
 </html>

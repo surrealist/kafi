@@ -11,10 +11,10 @@
     "files": [
         "app/app.ts",
         "app/controller.ts",
-        "app/models/Device.ts", 
-        "app/models/Calculator.ts", 
-        "app/models/Building.ts", 
-        "app/models/House.ts", 
-        "app/models/HouseCalculator.ts" 
+        "app/Device.ts", 
+        "app/Calculator.ts", 
+        "app/Building.ts", 
+        "app/House.ts", 
+        "app/HouseCalculator.ts" 
     ]
 }

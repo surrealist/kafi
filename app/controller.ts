@@ -1,8 +1,9 @@
-///<reference path="../typings/tsd.d.ts"/> 
-/// <reference path="models.ts" />
-
-module Demo {
-  export class MainController {
+///<reference path="../typings/tsd.d.ts"/>  
+ 
+ import Device from 'Device';
+ import House from 'House';
+ 
+  export default class MainController {
 
     public static $inject = [ "$log" ];
     public myHouse:House = new House();
@@ -23,8 +24,5 @@ module Demo {
       var d = new Device(name, 1, watts, hoursPerDay, daysPerMonth);
       this.myHouse.devices.push(d);
     }
-  }
-}
+  } 
 
-angular.module("myApp")
-  .controller("MainController", Demo.MainController);

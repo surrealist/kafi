@@ -6,7 +6,7 @@ var htmlmin = require("gulp-minify-html");
 
 var destinationFolder = 'calculator';
 
-gulp.task('default', ['jslib', 'ts', 'html', 'css', 'fonts'], function () {
+gulp.task('default', ['jslib', 'jspm',  'ts', 'html', 'css', 'fonts'], function () {
   //
 });
 
@@ -15,7 +15,7 @@ gulp.task('jslib', function () {
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
     'node_modules/angular/angular.js',
-    'bower_components/chance/chance.js'
+    'bower_components/chance/chance.js' 
   ];
 
   return gulp.src(src)
@@ -65,4 +65,13 @@ gulp.task('fonts', function () {
 
   return gulp.src(src)
     .pipe(gulp.dest(destinationFolder + '/fonts'));
+});
+
+gulp.task('jspm', function () {
+  var src = [
+    'jspm_packages/**/*.*'
+  ];
+
+  return gulp.src(src)
+    .pipe(gulp.dest(destinationFolder + '/jspm_packages'));
 });
