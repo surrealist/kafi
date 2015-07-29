@@ -11,6 +11,7 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "chai": "^3.2.0",
     "glob": "^5.0.14",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
