@@ -20,7 +20,7 @@ gulp.task('jslib', function () {
 
   return gulp.src(src)
     .pipe(concat('lib.js'))
-  //  .pipe(ugly())
+    .pipe(ugly())
     .pipe(gulp.dest(destinationFolder));
 });
 
