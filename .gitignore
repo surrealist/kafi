@@ -6,6 +6,8 @@
 app/*.js
 app/*.js.map
 
+.DS_Store
+
 # output folder
 calculator/
 
