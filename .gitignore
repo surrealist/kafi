@@ -21,6 +21,7 @@ calculator/
 node_modules/
 bower_components/
 typings/
+jspm_packages/
 
 # User-specific files
 *.suo

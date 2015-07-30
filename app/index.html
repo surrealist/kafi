@@ -136,7 +136,10 @@
         "defaultJSExtensions": true
       });
       System.import('app').then(function(){  
-            angular.bootstrap(document.getElementsByTagName("body"), ['myApp']); 
+            angular.bootstrap(
+              document.getElementsByTagName("body"), 
+              ['myApp']
+            ); 
       });
     </script>
   </body>
