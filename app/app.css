@@ -20,7 +20,9 @@ footer a {
 footer a:hover {
     text-decoration: none;
 }
-
+table#main input {
+  border-width: 0px;
+}
 thead th { 
     font-weight: normal !important;
 }
