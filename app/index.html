@@ -77,7 +77,7 @@
                   <td class="text-left">{{ $index+1 }}</td>
                   <td>{{ d.name }}</td>
                   <td class="text-right">
-                    <input type="number" ng-model="d.quantity" min="0" max="99" style="text-align: right;" />
+                    <input type="number" ng-model="d.quantity" min="0" max="9999" style="text-align: right;" />
                   </td>
                   <td class="text-right">{{ d.watts | number:0 }}</td>
                   <td class="text-right">{{ d.hoursPerDay | number:2}}</td>

@@ -11,7 +11,7 @@
     constructor(public $log:angular.ILogService) {
       this.$log.info("starting controller");
 
-      var d1 = new Device('Refrigerator', 1, 220, 24, 30);
+      var d1 = new Device('Little box', 1, 10, 10, 10);
       this.myHouse.devices.push(d1); 
 
     }
