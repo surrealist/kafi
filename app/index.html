@@ -70,6 +70,7 @@
                     <br/>Days/Mo</th>
                   <th style="width: 100px;" class="text-right">หน่วย/เดือน
                     <br/>Units/Mo</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
@@ -83,6 +84,7 @@
                   <td class="text-right">{{ d.hoursPerDay | number:2}}</td>
                   <td class="text-right">{{ d.daysPerMonth | number:2}}</td>
                   <td class="text-right text-info">{{ d.unitsPerMonth | number:2}}</td>
+                  <td></td>
                 </tr>
               </tbody>
               <tfoot>
@@ -93,51 +95,66 @@
                     <span>ชิ้น units</span>
                   </td>
                   <td colspan="2" class="text-right">
-                    <b>รวมจำนวนหน่วย/เดือน [1]:</b> 
+                    <b>รวมจำนวนหน่วย/เดือน:</b> 
                   </td>
                   <td class="info text-right text-info">
                     <strong>{{ c.myHouse.totalUnitsPerMonth | number:2 }}</strong>
                   </td>
+                  <td style="width: 16px;">[1]</td>
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>ค่าไฟฐาน [2]:</b> 
+                    <b>ค่าไฟฐาน:</b> 
                   </td>
                   <td class="info text-right text-info">
                     <strong style="font-size: 100%;">{{ c.myHouse.monthlyFee | number:2 }}</strong>
                   </td>
+                  <td>[2]</td>
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>ค่า Ft <b>49.61</b> สตางค์/หน่วย x {{ c.myHouse.totalUnitsPerMonth | number:2 }} [3]:</b> 
+                    <b>ค่าบริการรายเดือน:</b> 
                   </td>
                   <td class="info text-right text-info">
-                    <strong style="font-size: 100%;">{{ c.myHouse.totalUnitsPerMonth * 0.4961 | number:2 }}</strong>
+                    <strong style="font-size: 100%;">{{ c.myHouse.monthlyServiceFee | number:2 }}</strong>
                   </td>
+                  <td>[3]</td>
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>รวมค่าไฟฐาน ([2] + [3]) [4]:</b>
+                    <b>ค่า Ft <b>{{ c.myHouse.ftPerUnit * 100 }}</b> สตางค์/หน่วย x <u>{{ c.myHouse.totalUnitsPerMonth | number:2 }}</u>:</b> 
                   </td>
                   <td class="info text-right text-info">
-                    <strong style="font-size: 100%;">{{ c.myHouse.monthlyFee + (c.myHouse.totalUnitsPerMonth * 0.4961) | number:2 }}</strong>
+                    <strong style="font-size: 100%;">{{ c.myHouse.ftAmount | number:2 }}</strong>
                   </td>
+                  <td>[4]</td>
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>ภาษีมูลค่าเพิ่ม <b>7%</b> ([4] x 7%) [5]:</b>
+                    <b>รวมค่าไฟฐาน ([2] + [3] + [4]):</b>
                   </td>
                   <td class="info text-right text-info">
-                    <strong style="font-size: 100%;">{{ 0.07 * (c.myHouse.monthlyFee + (c.myHouse.totalUnitsPerMonth * 0.4961)) | number:2 }}</strong>
+                    <strong style="font-size: 100%;">{{ c.myHouse.baseTotal | number:2 }}</strong>
                   </td>
+                  <td>[5]</td>
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>ค่าไฟรวมทั้งสิ้น ([4] + [5]) [6]:</b>
+                    <b>ภาษีมูลค่าเพิ่ม <b>{{ c.myHouse.vatPercent * 100 | number:2 }}%</b> ([5] x 7%):</b>
                   </td>
                   <td class="info text-right text-info">
-                    <strong style="font-size: 120%;">{{ 1.07 * (c.myHouse.monthlyFee + (c.myHouse.totalUnitsPerMonth * 0.4961)) | number:2 }}</strong>
+                    <strong style="font-size: 100%;">{{ c.myHouse.vatAmount | number:2 }}</strong>
                   </td>
+                  <td>[6]</td>
+                </tr>
+                <tr>
+                  <td colspan="6" class="text-right">
+                    <b>ค่าไฟรวมทั้งสิ้น ([5] + [6]):</b>
+                  </td>
+                  <td class="info text-right text-info">
+                    <strong style="font-size: 120%;">{{ c.myHouse.netTotal | number:2 }}</strong>
+                  </td>
+                  <td>[7]</td>
                 </tr>
               </tfoot>
             </table>

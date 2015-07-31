@@ -53,7 +53,7 @@ export default class HouseCalculator implements Calculator {
       amount += rng.amount;
 
     }
-    return Math.round(amount * 10000.0) / 10000.0;
+    return Math.round(amount * 100.0) / 100.0;
   }
 
   private calculateRange(units: number,
@@ -65,7 +65,7 @@ export default class HouseCalculator implements Calculator {
       var amount = x * bahtPerUnit;
       return {
         unitsPerMonth: units,
-        amount: Math.round(amount * 10000.0) / 10000.0
+        amount: Math.round(amount * 100.0) / 100.0
       };
     }
     return {

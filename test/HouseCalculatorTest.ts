@@ -15,28 +15,28 @@ describe('HouseCalculator', function() {
 
     it('first 15 units: 1 unit', function() {
       var fee = calc.calculateFromUnitsPerMonth(1);
-      expect(fee).to.equal(1.8632);
+      expect(fee).to.equal(1.86);
     })
 
     it('first 15 units: 10 units', function() {
       var fee = calc.calculateFromUnitsPerMonth(10);
-      expect(fee).to.equal(18.6320); 
+      expect(fee).to.equal(18.63); 
     })
     
     it('first 15 units: 15 units', function() {
       var fee = calc.calculateFromUnitsPerMonth(15);
-      expect(fee).to.equal(27.9480); 
+      expect(fee).to.equal(27.95); 
     })
 
 
     it('20 units', function() { 
       var fee = calc.calculateFromUnitsPerMonth(20);
-      expect(fee).to.equal(40.4610); 
+      expect(fee).to.equal(40.46); 
     });
       
     it('25 units', function() { 
       var fee = calc.calculateFromUnitsPerMonth(25);
-      expect(fee).to.equal(52.974); 
+      expect(fee).to.equal(52.98); 
     });
 
   });
