@@ -76,13 +76,21 @@
               <tbody>
                 <tr ng-repeat="d in c.myHouse.devices">
                   <td class="text-left">{{ $index+1 }}</td>
-                  <td>{{ d.name }}</td>
+                  <td>
+                    <input type="text" ng-model="d.name" style="text-align: left;" />
+                  </td>
                   <td class="text-right">
                     <input type="number" ng-model="d.quantity" min="0" max="9999" style="text-align: right;" />
                   </td>
-                  <td class="text-right">{{ d.watts | number:0 }}</td>
-                  <td class="text-right">{{ d.hoursPerDay | number:2}}</td>
-                  <td class="text-right">{{ d.daysPerMonth | number:2}}</td>
+                  <td class="text-right">
+                    <input type="number" ng-model="d.watts" min="0" max="9999" style="text-align: right" />
+                  </td>
+                  <td class="text-right">
+                    <input type="number" ng-model="d.hoursPerDay" min="0" max="9999" style="text-align: right" />
+                  </td>
+                  <td class="text-right">
+                    <input type="number" ng-model="d.daysPerMonth" min="0" max="9999" style="text-align: right" />
+                  </td>
                   <td class="text-right text-info">{{ d.unitsPerMonth | number:2}}</td>
                   <td></td>
                 </tr>
@@ -95,7 +103,7 @@
                     <span>ชิ้น units</span>
                   </td>
                   <td colspan="2" class="text-right">
-                    <b>รวมจำนวนหน่วย/เดือน:</b> 
+                    <b>รวมจำนวนหน่วย/เดือน:</b>
                   </td>
                   <td class="info text-right text-info">
                     <strong>{{ c.myHouse.totalUnitsPerMonth | number:2 }}</strong>
@@ -104,7 +112,7 @@
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>ค่าไฟฐาน:</b> 
+                    <b>ค่าไฟฐาน:</b>
                   </td>
                   <td class="info text-right text-info">
                     <strong style="font-size: 100%;">{{ c.myHouse.monthlyFee | number:2 }}</strong>
@@ -113,7 +121,8 @@
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>ประเภท <u>{{ c.myHouse.houseType }}</u> ค่าบริการรายเดือน:</b> 
+                    <b>ประเภท
+                      <u>{{ c.myHouse.houseType }}</u>ค่าบริการรายเดือน:</b>
                   </td>
                   <td class="info text-right text-info">
                     <strong style="font-size: 100%;">{{ c.myHouse.monthlyServiceFee | number:2 }}</strong>
@@ -122,7 +131,9 @@
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>ค่า Ft <u>{{ c.myHouse.ftPerUnit * 100 }}</u> สตางค์/หน่วย x <u>{{ c.myHouse.totalUnitsPerMonth | number:2 }}</u>:</b> 
+                    <b>ค่า Ft
+                      <u>{{ c.myHouse.ftPerUnit * 100 }}</u>สตางค์/หน่วย x
+                      <u>{{ c.myHouse.totalUnitsPerMonth | number:2 }}</u>:</b>
                   </td>
                   <td class="info text-right text-info">
                     <strong style="font-size: 100%;">{{ c.myHouse.ftAmount | number:2 }}</strong>
@@ -140,7 +151,8 @@
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>ภาษีมูลค่าเพิ่ม ([5] x <u>{{ c.myHouse.vatPercent * 100 | number:2 }}</u>%):</b>
+                    <b>ภาษีมูลค่าเพิ่ม ([5] x
+                      <u>{{ c.myHouse.vatPercent * 100 | number:2 }}</u>%):</b>
                   </td>
                   <td class="info text-right text-info">
                     <strong style="font-size: 100%;">{{ c.myHouse.vatAmount | number:2 }}</strong>

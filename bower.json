@@ -13,8 +13,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "chance": "~0.7.6",
+  "dependencies": { 
     "fontawesome": "~4.3.0"
   }
 }

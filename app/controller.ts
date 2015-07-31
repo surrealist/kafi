@@ -17,10 +17,10 @@
     }
 
     addDevice():void {
-      var name = `${chance.first()}'s server box`;
-      var watts = chance.integer({min: 10, max: 20}) * 10;
-      var hoursPerDay = chance.integer({min: 1, max: 10});
-      var daysPerMonth = chance.integer({min: 10, max: 20});
+      var name = 'A device';
+      var watts = 10;
+      var hoursPerDay = 10;
+      var daysPerMonth = 10;
       var d = new Device(name, 1, watts, hoursPerDay, daysPerMonth);
       this.myHouse.devices.push(d);
     }
