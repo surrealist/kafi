@@ -24,3 +24,7 @@ footer a:hover {
 thead th { 
     font-weight: normal !important;
 }
+
+[ng-cloak] {
+  display: none;
+}
