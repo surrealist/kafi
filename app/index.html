@@ -113,7 +113,7 @@
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>ค่าบริการรายเดือน:</b> 
+                    <b>ประเภท <u>{{ c.myHouse.houseType }}</u> ค่าบริการรายเดือน:</b> 
                   </td>
                   <td class="info text-right text-info">
                     <strong style="font-size: 100%;">{{ c.myHouse.monthlyServiceFee | number:2 }}</strong>
@@ -122,7 +122,7 @@
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>ค่า Ft <b>{{ c.myHouse.ftPerUnit * 100 }}</b> สตางค์/หน่วย x <u>{{ c.myHouse.totalUnitsPerMonth | number:2 }}</u>:</b> 
+                    <b>ค่า Ft <u>{{ c.myHouse.ftPerUnit * 100 }}</u> สตางค์/หน่วย x <u>{{ c.myHouse.totalUnitsPerMonth | number:2 }}</u>:</b> 
                   </td>
                   <td class="info text-right text-info">
                     <strong style="font-size: 100%;">{{ c.myHouse.ftAmount | number:2 }}</strong>
@@ -140,7 +140,7 @@
                 </tr>
                 <tr>
                   <td colspan="6" class="text-right">
-                    <b>ภาษีมูลค่าเพิ่ม <b>{{ c.myHouse.vatPercent * 100 | number:2 }}%</b> ([5] x 7%):</b>
+                    <b>ภาษีมูลค่าเพิ่ม ([5] x <u>{{ c.myHouse.vatPercent * 100 | number:2 }}</u>%):</b>
                   </td>
                   <td class="info text-right text-info">
                     <strong style="font-size: 100%;">{{ c.myHouse.vatAmount | number:2 }}</strong>

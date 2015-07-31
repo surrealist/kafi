@@ -11,6 +11,13 @@ export default class House extends Building {
     return new HouseCalculator();
   }
   
+  public get houseType(): string {
+    if (this.totalUnitsPerMonth <= 150) {
+      return "1.1";
+    } else {
+      return "1.2";
+    }
+  }
   public get monthlyServiceFee(): number {
     if (this.totalUnitsPerMonth <= 150) {
       return 8.19;
