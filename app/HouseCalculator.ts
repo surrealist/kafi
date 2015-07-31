@@ -39,6 +39,19 @@ export default class HouseCalculator implements Calculator {
       unitsPerMonth = rng.unitsPerMonth;
       amount += rng.amount;
 
+    } else {
+      var rng = this.calculateRange(unitsPerMonth, 400, 3.9361);
+      unitsPerMonth = rng.unitsPerMonth;
+      amount += rng.amount;
+
+      rng = this.calculateRange(unitsPerMonth, 150, 3.7362);
+      unitsPerMonth = rng.unitsPerMonth;
+      amount += rng.amount;
+
+      rng = this.calculateRange(unitsPerMonth, 0, 2.7628);
+      unitsPerMonth = rng.unitsPerMonth;
+      amount += rng.amount;
+
     }
     return Math.round(amount * 10000.0) / 10000.0;
   }
